@@ -1,0 +1,21 @@
+/*Write a program to determine the ranges of char, short, int, and long variables, both signed and
+unsigned, by printing appropriate values from standard headers.
+Do not use spaces to align table columns.*/
+
+#include<stdio.h>
+#include<limits.h>
+#include<float.h>
+
+int main()
+{
+printf("Data Type\t\tSize\tFormat Specifier\tRange\n");
+printf("Char\t\t\t%ld\t%%c\t\t%d to %d\n",sizeof(char),CHAR_MIN,CHAR_MAX);
+printf("Unsigned char\t\t%ld\t%%c\t\t0 to %d\n",sizeof(unsigned char),UCHAR_MAX);
+printf("Short int\t\t%ld\t%%hd\t\t%d to %d\n",sizeof(short int),SHRT_MIN,SHRT_MAX);
+printf("Unsigned short int\t%lu\t%%hu\t\t0 to %d\n",sizeof(unsigned short int),USHRT_MAX);
+printf("Int\t\t\t%ld\t%%d\t\t%d to %d\n",sizeof(int),INT_MIN,INT_MAX);
+printf("Unsigned int\t\t%ld\t%%u\t\t0 to %d\n",sizeof(unsigned int),UINT_MAX);
+printf("Long int\t\t%ld\t%%ld\t\t%ld to %ld\n",sizeof(long int),LONG_MIN,LONG_MAX);
+printf("Unsigned long int\t%ld\t%%lu\t\t0 to %ld\n",sizeof(unsigned long int),ULONG_MAX);
+return 0;
+}
